@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ScheduleAppointmentActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="32dp">
+
+                <ImageView
+                    android:id="@+id/iv_back_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_arrow_back"
+                    android:contentDescription="Back"
+                    android:layout_marginEnd="17dp"
+                    app:tint="@android:color/black"
+                    tools:src="@drawable/back_arrow" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:text="Select Doctor !"
+                    android:textColor="@android:color/black"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_illustration"
+                android:layout_width="362dp"
+                android:layout_height="212dp"
+                android:layout_marginBottom="32dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="Doctor Selection Illustration"
+                android:scaleType="fitCenter"
+                android:src="@drawable/remove_doctor2"
+                tools:src="@drawable/remove_doctor2" />
+
+            <GridLayout
+                android:id="@+id/gl_doctors_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:alignmentMode="alignBounds"
+                android:columnOrderPreserved="false"
+                android:useDefaultMargins="true"
+                android:layout_marginBottom="24dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#F5F5F5">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:padding="16dp">
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/profile_doctor"
+                            android:contentDescription="Doctor Avatar"
+                            android:layout_marginBottom="8dp"
+                            tools:src="@drawable/profile_doctor" />
+                        <TextView
+                            android:layout_width="wrap_content"                            android:layout_height="wrap_content"
+                            android:text="Aryan Giri"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dermatologic"
+                            android:textSize="14sp"
+                            android:textColor="#757575"
+                            android:layout_marginBottom="4dp" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star_half" app:tint="#FFC107" />
+                        </LinearLayout>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:text="schedule"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/white"
+                            android:backgroundTint="#6E8CFC"
+                            android:textAllCaps="false"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            app:cornerRadius="8dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#F5F5F5">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:padding="16dp">
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/profile_doctor"
+                            android:contentDescription="Doctor Avatar"
+                            android:layout_marginBottom="8dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Aryan Giri"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dermatologic"
+                            android:textSize="14sp"
+                            android:textColor="#757575"
+                            android:layout_marginBottom="4dp" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star_half" app:tint="#FFC107" />
+                        </LinearLayout>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:text="schedule"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/white"
+                            android:backgroundTint="#6E8CFC"
+                            android:textAllCaps="false"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            app:cornerRadius="8dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#F5F5F5">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:padding="16dp">
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/profile_doctor"
+                            android:contentDescription="Doctor Avatar"
+                            android:layout_marginBottom="8dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Aryan Giri"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dermatologic"
+                            android:textSize="14sp"
+                            android:textColor="#757575"
+                            android:layout_marginBottom="4dp" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star_half" app:tint="#FFC107" />
+                        </LinearLayout>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:text="schedule"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/white"
+                            android:backgroundTint="#6E8CFC"
+                            android:textAllCaps="false"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            app:cornerRadius="8dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#F5F5F5">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:padding="16dp">
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/profile_doctor"
+                            android:contentDescription="Doctor Avatar"
+                            android:layout_marginBottom="8dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Aryan Giri"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dermatologic"
+                            android:textSize="14sp"
+                            android:textColor="#757575"
+                            android:layout_marginBottom="4dp" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star_half" app:tint="#FFC107" />
+                        </LinearLayout>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:text="schedule"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/white"
+                            android:backgroundTint="#6E8CFC"
+                            android:textAllCaps="false"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            app:cornerRadius="8dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#F5F5F5">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:padding="16dp">
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/profile_doctor"
+                            android:contentDescription="Doctor Avatar"
+                            android:layout_marginBottom="8dp" />
+                        <TextView
+                            android:layout_width="wrap_content"                            android:layout_height="wrap_content"
+                            android:text="Dr. Smith"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cardiology"
+                            android:textSize="14sp"
+                            android:textColor="#757575"
+                            android:layout_marginBottom="4dp" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                        </LinearLayout>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:text="schedule"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/white"
+                            android:backgroundTint="#6E8CFC"
+                            android:textAllCaps="false"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            app:cornerRadius="8dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#F5F5F5">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:padding="16dp">
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/profile_doctor"
+                            android:contentDescription="Doctor Avatar"
+                            android:layout_marginBottom="8dp" />
+                        <TextView
+                            android:layout_width="wrap_content"                            android:layout_height="wrap_content"
+                            android:text="Dr. Jones"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Neurology"
+                            android:textSize="14sp"
+                            android:textColor="#757575"
+                            android:layout_marginBottom="4dp" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star_half" app:tint="#FFC107" />
+                        </LinearLayout>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:text="schedule"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/white"
+                            android:backgroundTint="#6E8CFC"
+                            android:textAllCaps="false"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            app:cornerRadius="8dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#F5F5F5">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:padding="16dp">
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/profile_doctor"
+                            android:contentDescription="Doctor Avatar"
+                            android:layout_marginBottom="8dp" />
+                        <TextView
+                            android:layout_width="wrap_content"                            android:layout_height="wrap_content"
+                            android:text="Dr. White"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Oncology"
+                            android:textSize="14sp"
+                            android:textColor="#757575"
+                            android:layout_marginBottom="4dp" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star_half" app:tint="#FFC107" />
+                        </LinearLayout>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:text="schedule"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/white"
+                            android:backgroundTint="#6E8CFC"
+                            android:textAllCaps="false"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            app:cornerRadius="8dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#F5F5F5">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:padding="16dp">
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/profile_doctor"
+                            android:contentDescription="Doctor Avatar"
+                            android:layout_marginBottom="8dp" />
+                        <TextView
+                            android:layout_width="wrap_content"                            android:layout_height="wrap_content"
+                            android:text="Dr. Green"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pediatrics"
+                            android:textSize="14sp"
+                            android:textColor="#757575"
+                            android:layout_marginBottom="4dp" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star" app:tint="#FFC107" />
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star_half" app:tint="#FFC107" />
+                        </LinearLayout>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:text="schedule"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/white"
+                            android:backgroundTint="#6E8CFC"
+                            android:textAllCaps="false"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            app:cornerRadius="8dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </GridLayout>
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Back"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#6E8CFC"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
