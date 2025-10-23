@@ -62,10 +62,7 @@ Built using **Kotlin**, **Firebase**, and **MVVM Architecture** for scalable, re
 |-------|-------------------|
 | **Frontend** | Kotlin, Android SDK, XML |
 | **Backend** | Firebase (Firestore, Authentication, Storage, Cloud Functions) |
-| **Architecture** | MVVM (Model-View-ViewModel) |
-| **Payment** | Razorpay / Stripe Integration |
-| **Libraries** | Retrofit, Glide, MPAndroidChart, Firebase ML Kit |
-
+  
 ---
 
 ## ⚙️ Installation
